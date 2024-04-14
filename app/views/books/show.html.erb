@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>課題２</title>
+    <meta name="csrf-param" content="authenticity_token" />
+  <meta charset="UTF-8" />
+  </head>
+
+<body>
+<h2>Title</h2>
+<p><%= @book.title %></p>
+
+<h2>Body</h2>
+<p><%= @book.body %></p>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+<a class="back" href="/books">Back</a>
+
+</body>
+</html>
