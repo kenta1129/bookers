@@ -7,8 +7,8 @@ class BooksController < ApplicationController
    redirect_to book_path(@book.id)
 else
   flash.now[:alert] = "Error"
-  @book = Book.new
-  redirect_to books_path(@book.id)
+  @books = Book.all
+  render :index
 end
 end
 
@@ -41,7 +41,7 @@ end
     redirect_to book_path(@book.id)
     
     else
-  flash[:alert] = "Error"
+  flash.now[:alert] = "Error"
   render :edit
     
   end
